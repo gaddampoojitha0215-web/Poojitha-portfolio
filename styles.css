@@ -2,8 +2,8 @@
     --bg-color: #0d0e15;
     --text-primary: #ffffff;
     --text-secondary: #a9a9bc;
-    --accent-color: #4facfe;
-    --accent-gradient: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    --accent-color: #00d4ff;
+    --accent-gradient: linear-gradient(135deg, #6900ff 0%, #00d4ff 100%);
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.08);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
@@ -53,7 +53,7 @@ body {
     left: -10%;
     width: 500px;
     height: 500px;
-    background: #00f2fe;
+    background: #6900ff;
     opacity: 0.15;
 }
 
@@ -62,7 +62,7 @@ body {
     right: -10%;
     width: 600px;
     height: 600px;
-    background: #4facfe;
+    background: #00d4ff;
     opacity: 0.15;
     animation-delay: -5s;
 }
@@ -72,7 +72,7 @@ body {
     left: 50%;
     width: 400px;
     height: 400px;
-    background: #8e2de2;
+    background: #ff007a;
     opacity: 0.1;
     animation-delay: -10s;
 }
@@ -454,9 +454,9 @@ main {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(79, 172, 254, 0.4);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(105, 0, 255, 0.5);
+    box-shadow: 0 15px 40px rgba(105, 0, 255, 0.2);
 }
 
 .project-category {
@@ -644,4 +644,28 @@ main {
     .section-title {
         font-size: 2rem;
     }
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typing Animation */
+.typing-text {
+    border-right: 2px solid var(--accent-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s infinite;
+    display: inline-block;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
